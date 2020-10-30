@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="node_modules/bootstrap/scss/bootstrap.scss">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="style.css">
+
+
+    <title>Hello, world!</title>
+  </head>   
+  <body>
+
+    <div class="container calcula">
+        <div class="row">
+            <div class="col linha1">
+                <label class="label" id="label" for="inputNumber"></label>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col linha2">
+                <input class="btn btn-primary botao" type="button" value="c">
+            </div>
+            <div class="col linha2">
+                <input class="btn btn-primary botao" type="button" value="">
+            </div>
+            <div class="col linha2">
+                <input class="btn btn-primary botao" type="button" value="%">
+            </div>
+            <div class="col linha2">
+                <input class="btn btn-primary botao" type="button" value="/">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col linha2">
+                <input class="btn btn-primary botao" id="1" type="button" onclick="teste1(1)" value="1">
+            </div>
+            <div class="col linha2">
+                <input class="btn btn-primary botao" id="2" type="button" onclick="teste1( 2)" value="2">
+            </div>
+            <div class="col linha2">
+                <input class="btn btn-primary botao" id="3" type="button" value="3">
+            </div>
+            <div class="col linha2">
+                <input class="btn btn-primary botao" type="button" value="X">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col linha2">
+                <input class="btn btn-primary botao" type="button" value="4">
+            </div>
+            <div class="col linha2">
+                <input class="btn btn-primary botao" type="button" value="5">
+            </div>
+            <div class="col linha2">
+                <input class="btn btn-primary botao" type="button" value="6">
+            </div>
+            <div class="col linha2">
+                <input class="btn btn-primary botao" type="button" value="-">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col linha2">
+                <input class="btn btn-primary botao" type="button" value="7">
+            </div>
+            <div class="col linha2">
+                <input class="btn btn-primary botao" type="button" value="8">
+            </div>
+            <div class="col linha2">
+                <input class="btn btn-primary botao" type="button" value="9">
+            </div>
+            <div class="col linha2">
+                <input class="btn btn-primary botao" type="button" value="+">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col linha2">
+                <input class="btn btn-primary botao" type="button" value="">
+            </div>
+            <div class="col linha2">
+                <input class="btn btn-primary botao" type="button" value="0">
+            </div>
+            <div class="col linha2">
+                <input class="btn btn-primary botao" type="button" value=",">
+            </div>
+            <div class="col linha2">
+                <input class="btn btn-primary botao" id="enter" type="button" value="=">
+            </div>
+        </div>
+        
+       
+    </div>
+
+
+
+
+
+    <!-- ---------------------------------POPPER.JS/YQUERRY/BOOTSTRAP.JS-------------------------------- -->
+    <script src="node_modules/popper.js"></script>
+    <script src="node_modules/jquerry/index.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
+
+    <script>
+        
+        let num1 = document.getElementById("1");
+        let num2 = document.getElementById("2");
+        let num3 = document.getElementById("3");
+        let enter = document.getElementById("enter");
+
+        enter.onclick = 3;
+        
+
+
+       
+
+        function teste(){
+           document.getElementById('label').innerHTML = 1;
+        }
+        function teste2(){
+            document.getElementById('label').innerHTML = 2;
+        }
+
+        function escrever(){
+            document.getElementById('label').innerHTML = 2;
+        }
+
+        function teste1(x1){
+     
+                document.getElementById('label').innerHTML = (x1); 
+            
+        }
+        
+
+    </script>
+
+  </body>
+</html>
