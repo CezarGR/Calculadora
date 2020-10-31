@@ -36,19 +36,20 @@ body{
     border-color:transparent;
 
 }
-.label{
+.campo{
   
     font-size: 30px;
     display: flex;
  
     align-items: center;
-
+    width: 100%;
     position: absolute;
     top: 0px;
-    left: 10px;
+    left: 0px;
     right: 0px;
     bottom: 0px;
     margin: auto;
     color: rgb(104, 104, 104) ;
-  
+    border-color: transparent;
+   
 }
