@@ -19,7 +19,7 @@
     <div class="container calcula">
         <div class="row">
             <div class="col linha1">
-                <label class="label" id="label" for="inputNumber"></label>
+                <input type="text" class="label" id="label" value="">
             </div>
 
         </div>
@@ -40,10 +40,10 @@
 
         <div class="row">
             <div class="col linha2">
-                <input class="btn btn-primary botao" id="1" type="button" onclick="teste1(1)" value="1">
+                <input class="btn btn-primary botao" id="1" type="button" onclick="esscrver()" value="1">
             </div>
             <div class="col linha2">
-                <input class="btn btn-primary botao" id="2" type="button" onclick="teste1( 2)" value="2">
+                <input class="btn btn-primary botao" id="2" type="button" onclick="esscrver()" value="2">
             </div>
             <div class="col linha2">
                 <input class="btn btn-primary botao" id="3" type="button" value="3">
@@ -112,33 +112,29 @@
 
     <script>
         
-        let num1 = document.getElementById("1");
-        let num2 = document.getElementById("2");
+        let num1 = document.getElementById("1").value;
+        let num2 = document.getElementById("2").va;
         let num3 = document.getElementById("3");
         let enter = document.getElementById("enter");
+        
+
 
         enter.onclick = 3;
         
+        function esscrver(num1,num2,num3){
+            
+            var input = document.getElementById("label");
+            input.setAttribute("value", ""+num1+""+""+num2+""+""+num3+"" );
+        }
 
 
        
 
-        function teste(){
-           document.getElementById('label').innerHTML = 1;
-        }
-        function teste2(){
-            document.getElementById('label').innerHTML = 2;
-        }
-
-        function escrever(){
-            document.getElementById('label').innerHTML = 2;
-        }
-
-        function teste1(x1){
+        // function teste1(x1){
      
-                document.getElementById('label').innerHTML = (x1); 
+        //         document.getElementById('label').innerHTML = (x1); 
             
-        }
+        // }
         
 
     </script>
