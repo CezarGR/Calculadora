@@ -19,82 +19,82 @@
     <div class="container calcula">
         <div class="row">
             <div class="col linha1">
-                <input type="text" class="label" id="label" value="">
+                <input type="text" class="campo " id="campo" value="">
             </div>
 
         </div>
         <div class="row">
             <div class="col linha2">
-                <input class="btn btn-primary botao" type="button" value="c">
+                <input class="btn btn-primary botao" type="button" value="c" onclick="escrever(this.value)">
             </div>
             <div class="col linha2">
-                <input class="btn btn-primary botao" type="button" value="">
+                <input class="btn btn-primary botao" type="button" value="" onclick="escrever(this.value)">
             </div>
             <div class="col linha2">
-                <input class="btn btn-primary botao" type="button" value="%">
+                <input class="btn btn-primary botao" type="button" value="%" onclick="escrever(this.value)">
             </div>
             <div class="col linha2">
-                <input class="btn btn-primary botao" type="button" value="/">
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col linha2">
-                <input class="btn btn-primary botao" id="1" type="button" onclick="esscrver()" value="1">
-            </div>
-            <div class="col linha2">
-                <input class="btn btn-primary botao" id="2" type="button" onclick="esscrver()" value="2">
-            </div>
-            <div class="col linha2">
-                <input class="btn btn-primary botao" id="3" type="button" value="3">
-            </div>
-            <div class="col linha2">
-                <input class="btn btn-primary botao" type="button" value="X">
+                <input class="btn btn-primary botao" type="button" value="/" onclick="escrever(this.value)">
             </div>
         </div>
 
         <div class="row">
             <div class="col linha2">
-                <input class="btn btn-primary botao" type="button" value="4">
+                <input class="btn btn-primary botao" id="1" type="button" onclick="escrever(this.value)" value="1">
             </div>
             <div class="col linha2">
-                <input class="btn btn-primary botao" type="button" value="5">
+                <input class="btn btn-primary botao" id="2" type="button" onclick="escrever(this.value)" value="2">
             </div>
             <div class="col linha2">
-                <input class="btn btn-primary botao" type="button" value="6">
+                <input class="btn btn-primary botao" id="3" type="button" onclick="escrever(this.value)" value="3">
             </div>
             <div class="col linha2">
-                <input class="btn btn-primary botao" type="button" value="-">
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col linha2">
-                <input class="btn btn-primary botao" type="button" value="7">
-            </div>
-            <div class="col linha2">
-                <input class="btn btn-primary botao" type="button" value="8">
-            </div>
-            <div class="col linha2">
-                <input class="btn btn-primary botao" type="button" value="9">
-            </div>
-            <div class="col linha2">
-                <input class="btn btn-primary botao" type="button" value="+">
+                <input class="btn btn-primary botao" type="button" value="X" onclick="escrever(this.value)">
             </div>
         </div>
 
         <div class="row">
             <div class="col linha2">
-                <input class="btn btn-primary botao" type="button" value="">
+                <input class="btn btn-primary botao" type="button" value="4" onclick="escrever(this.value)">
             </div>
             <div class="col linha2">
-                <input class="btn btn-primary botao" type="button" value="0">
+                <input class="btn btn-primary botao" type="button" value="5" onclick="escrever(this.value)">
             </div>
             <div class="col linha2">
-                <input class="btn btn-primary botao" type="button" value=",">
+                <input class="btn btn-primary botao" type="button" value="6" onclick="escrever(this.value)">
             </div>
             <div class="col linha2">
-                <input class="btn btn-primary botao" id="enter" type="button" value="=">
+                <input class="btn btn-primary botao" type="button" value="-" onclick="escrever(this.value)">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col linha2">
+                <input class="btn btn-primary botao" type="button" value="7" onclick="escrever(this.value)">
+            </div>
+            <div class="col linha2">
+                <input class="btn btn-primary botao" type="button" value="8" onclick="escrever(this.value)">
+            </div>
+            <div class="col linha2">
+                <input class="btn btn-primary botao" type="button" value="9" onclick="escrever(this.value)">
+            </div>
+            <div class="col linha2">
+                <input class="btn btn-primary botao" type="button" value="+" onclick="escrever(this.value)">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col linha2">
+                <input class="btn btn-primary botao" type="button" value="" onclick="escrever(this.value)">
+            </div>
+            <div class="col linha2">
+                <input class="btn btn-primary botao" type="button" value="0" onclick="escrever(this.value)">
+            </div>
+            <div class="col linha2">
+                <input class="btn btn-primary botao" type="button" value="," onclick="escrever(this.value)">
+            </div>
+            <div class="col linha2">
+                <input class="btn btn-primary botao" id="enter" type="button" value="=" onclick="escrever(this.value)">
             </div>
         </div>
         
@@ -111,20 +111,14 @@
     <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
 
     <script>
-        
-        let num1 = document.getElementById("1").value;
-        let num2 = document.getElementById("2").va;
-        let num3 = document.getElementById("3");
-        let enter = document.getElementById("enter");
-        
+     
 
-
-        enter.onclick = 3;
         
-        function esscrver(num1,num2,num3){
+        function escrever(valor){
             
-            var input = document.getElementById("label");
-            input.setAttribute("value", ""+num1+""+""+num2+""+""+num3+"" );
+            var elemento = document.getElementById("campo");
+            var value_ = elemento.value;
+            elemento.value = value_+ valor;
         }
 
 
