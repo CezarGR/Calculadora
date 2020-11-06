@@ -49,7 +49,7 @@
                 <input class="btn btn-primary botao" id="3" type="button" onclick="escrever(this.value)" value="3">
             </div>
             <div class="col linha2">
-                <input class="btn btn-primary botao" type="button" value="X" onclick="escrever(this.value)">
+                <input class="btn btn-primary botao" type="button" value="*" title="x" onclick="escrever(this.value)">
             </div>
         </div>
 
@@ -91,10 +91,10 @@
                 <input class="btn btn-primary botao" type="button" value="0" onclick="escrever(this.value)">
             </div>
             <div class="col linha2">
-                <input class="btn btn-primary botao" type="button" value="," onclick="escrever(this.value)">
+                <input class="btn btn-primary botao" type="button" value="." onclick="escrever(this.value)">
             </div>
             <div class="col linha2">
-                <input class="btn btn-primary botao" id="enter" type="button" value="=" onclick="escrever(this.value)">
+                <input class="btn btn-primary botao" id="enter" type="button" value="=" onclick="igual()" >
             </div>
         </div>
         
@@ -125,15 +125,10 @@
             elemento.value = null;
         }
 
-
-       
-
-        // function teste1(x1){
-     
-        //         document.getElementById('label').innerHTML = (x1); 
-            
-        // }
-        
+        function igual(){
+            var resul = elemento.value;
+            elemento.value = eval(resul);
+        }
 
     </script>
 
