@@ -25,7 +25,7 @@
         </div>
         <div class="row">
             <div class="col linha2">
-                <input class="btn btn-primary botao" type="button" value="c" onclick="escrever(this.value)">
+                <input class="btn btn-primary botao" type="button" value="c" onclick="apagar()">
             </div>
             <div class="col linha2">
                 <input class="btn btn-primary botao" type="button" value="" onclick="escrever(this.value)">
@@ -112,13 +112,17 @@
 
     <script>
      
-
+        var elemento = document.getElementById("campo");
+        var value_ = elemento.value;
         
         function escrever(valor){
-            
             var elemento = document.getElementById("campo");
             var value_ = elemento.value;
             elemento.value = value_+ valor;
+        }
+
+        function apagar(){
+            elemento.value = null;
         }
 
 
