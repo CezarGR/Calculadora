@@ -52,7 +52,7 @@
                 <input class="btn btn-primary botao" id="3" type="button" onclick="escrever(this.value)" value="3">
             </div>
             <div class="col linha2">
-                <input class="btn btn-primary botao" type="button" value="*" title="x" onclick="escrever(this.value)">
+                <input class="btn btn-primary botao" type="button" value="*" onclick="escrever(this.value)">
             </div>
         </div>
 
@@ -100,6 +100,11 @@
                 <input class="btn btn-primary botao" id="enter" type="button" value="=" onclick="igual()" >
             </div>
         </div>
+
+
+        <div class="tela">
+            <input type="text" class="campo " id="tela" value="">
+        </div>
         
        
     </div>
@@ -114,7 +119,10 @@
     <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
 
     <script>
-     
+        
+        var elementoTela = document.getElementById("tela");
+        var telaValor = elementoTela.value;
+
         var elemento = document.getElementById("campo");
         var value_ = elemento.value;
                 
@@ -135,6 +143,9 @@
         function igual(){
             var resul = elemento.value;
             elemento.value = eval(resul);
+
+            var teste = resul + " = " +elemento.value ; 
+            elementoTela.value = teste.replace(/\s/g, "\n");
         }
         
         function apagar(){
