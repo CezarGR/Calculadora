@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="node_modules/bootstrap/scss/bootstrap.scss">
@@ -25,10 +26,12 @@
         </div>
         <div class="row">
             <div class="col linha2">
-                <input class="btn btn-primary botao" type="button" value="c" onclick="apagar()">
+                <input class="btn btn-primary botao" type="button" value="c" onclick="apagarTudo()">
             </div>
             <div class="col linha2">
-                <input class="btn btn-primary botao" type="button" value="" onclick="escrever(this.value)">
+                <button class="btn btn-primary botao" type="button" value=" " id="apaga" onclick="apagar()">
+                    <span class="btn material-icons" style="color: white;">keyboard_arrow_left</span>
+                </button>
             </div>
             <div class="col linha2">
                 <input class="btn btn-primary botao" type="button" value="%" onclick="escrever(this.value)">
@@ -114,14 +117,18 @@
      
         var elemento = document.getElementById("campo");
         var value_ = elemento.value;
-        
+                
         function escrever(valor){
+
             var elemento = document.getElementById("campo");
             var value_ = elemento.value;
+
             elemento.value = value_+ valor;
+
+            return value_;
         }
 
-        function apagar(){
+        function apagarTudo(){
             elemento.value = null;
         }
 
@@ -129,6 +136,25 @@
             var resul = elemento.value;
             elemento.value = eval(resul);
         }
+        
+        function apagar(){
+            
+            var equacao = elemento.value;
+            var equacaoSeparado = equacao.split(/(\d)/);
+
+            console.log(equacaoSeparado);
+
+            equacaoSeparado.pop();
+            equacaoSeparado.pop();
+
+            console.log(equacaoSeparado); 
+
+            equacaoSeparado.join('');
+
+            elemento.value = equacaoSeparado.join('');
+        }
+      
+
 
     </script>
 
