@@ -141,11 +141,15 @@
         }
 
         function igual(){
-            var resul = elemento.value;
-            elemento.value = eval(resul);
-
-            var teste = resul + " = " +elemento.value ; 
-            elementoTela.value = teste.replace(/\s/g, "\n");
+            if(elemento.value == ''){
+                elemento.value = "0";
+                setTimeout(function pausa(){elemento.value = '';}, 500);
+            }else{
+                var resul = elemento.value;
+                elemento.value = eval(resul);
+                var teste = resul + " = " +elemento.value ; 
+                elementoTela.value = teste;
+            }
         }
         
         function apagar(){
@@ -165,6 +169,18 @@
             elemento.value = equacaoSeparado.join('');
         }
       
+        function potencia(){
+             
+            var equacao = elemento.value;
+            var equacaoSeparado = equacao.split(/(\d)/);
+
+            console.log(equacaoSeparado);
+
+            equacaoSeparado.split(/\s*"+"\s*/);
+
+            console.log(equacaoSeparado);
+
+        }
 
 
     </script>
